@@ -1,27 +1,27 @@
-#Test app
+# Test app
 
 Symfony REST + webpack encore Typescript and Vue.js
 
 Frontend located in assets folder.
 
 
-#USAGE:
+# USAGE:
 
 docker-compose up --build -d
 
 docker exec -it app sh -c "./bin/console do:sc:dr --force && ./bin/console do:sc:cr && ./bin/console do:fi:lo --no-interaction"
 
-##build assets
+# build assets
 
 docker exec -it app sh -c "./bin/console assets:install"
 docker-compose run --rm encore yarn build
 
-##Access
+# Access
 127.0.0.1/ - app
 
 127.0.0.1/swagger/doc - API (SWAGGER) documentation
 
-#RUN UNIT TESTS
+# RUN UNIT TESTS
 
 docker exec -it db sh -c "mysql -u root -psymfonypassword -e 'create database symfony_test'"
 
