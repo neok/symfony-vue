@@ -1,7 +1,7 @@
 # Test app
 
 ![GitHub Logo](/assets/images/scr.png)
-Format: ![Alt Text](url)
+
 
 Symfony REST + webpack encore Typescript and Vue.js
 
