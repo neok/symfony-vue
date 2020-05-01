@@ -18,15 +18,28 @@ class AppFixtures extends Fixture
             'https://cdn.pixabay.com/photo/2017/01/31/14/50/comic-characters-2024745_1280.png',
             'https://cdn.pixabay.com/photo/2014/07/16/08/18/clint-eastwood-394536_1280.jpg',
         ];
+
+        $genres = [
+            'comedy',
+            'thriller',
+            'detective'
+        ];
+
+        $names = [
+            'Awesome movie',
+            'Scary movies',
+            'Movie',
+            'Orly'
+        ];
         $faker = \Faker\Factory::create();
         for($i = 0; $i <10; $i++) {
             $movie = new Movie();
-            $movie->setTitle($faker->text(50));
-            $movie->setGenre($faker->text(10));
+            $movie->setTitle($names[random_int(0, 3)]);
+            $movie->setGenre($genres[random_int(0, 2)]);
             $movie->setImageSrc($imgSrc[random_int(0, 3)]);
             for($j = 0; $j < 2; $j++) {
                 $showTime = new Showtime();
-                $showTime->setShowtime(new \DateTime('- ' . random_int(1,3) . ' months'));
+                $showTime->setShowtime(new \DateTime('- ' . random_int(1,14) . ' days'));
                 $movie->addShowtime($showTime);
                 $manager->persist($movie);
             }
