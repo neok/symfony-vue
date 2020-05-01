@@ -14,6 +14,7 @@ docker exec -it app sh -c "./bin/console do:sc:dr --force && ./bin/console do:sc
 # build assets
 
 docker exec -it app sh -c "./bin/console assets:install"
+
 docker-compose run --rm encore yarn build
 
 # Access
