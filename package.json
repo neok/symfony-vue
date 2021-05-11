@@ -30,7 +30,7 @@
         "axios": "^0.21.1",
         "bootstrap": "^4.4.1",
         "bootstrap-vue": "^2.13.0",
-        "lodash": "^4.17.15",
+        "lodash": "^4.17.21",
         "nprogress": "^0.2.0",
         "ts-loader": "^5.3.0",
         "typescript": "^3.8.3",
